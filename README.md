@@ -30,6 +30,9 @@ This returns the "companyName" field from the macaddress.io payload.
 Some MAC addresses, while valid, are not registered and thus return a
 blank line.
 
+    [root@localhost mac_lookup]# docker run -it mac_lookup -k REDACTED -m 74:d4:35:64:8a:4e
+    Giga-Byte Tech Co, Ltd
+
 # Security
 
 This application communicates with api.macaddress.io via HTTPS only.
