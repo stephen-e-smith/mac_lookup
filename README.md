@@ -26,6 +26,10 @@ A simple MAC vendor lookup script.
 
     docker run -it mac_lookup -k <macaddress.io api key> -m <mac>
 
+This returns the "companyName" field from the macaddress.io payload.
+Some MAC addresses, while valid, are not registered and thus return a
+blank line.
+
 # Security
 
 This application communicates with api.macaddress.io via HTTPS only.
