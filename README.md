@@ -24,13 +24,19 @@ A simple MAC vendor lookup script.
 
 # Usage
 
-    docker run -it mac_lookup -k <macaddress.io api key> -m <mac>
-
-This returns the "companyName" field from the macaddress.io payload.
-Some MAC addresses, while valid, are not registered and thus return a
-blank line.
-
-    [root@localhost mac_lookup]# docker run -it mac_lookup -k REDACTED -m 74:d4:35:64:8a:4e
+    [root@localhost mac_lookup]# docker run -it mac_lookup
+    bash-4.4# ./maclookup.py --help
+    usage: maclookup.py [-h] [-m MAC] [-k KEY]
+    
+    A MAC address to vendor lookup script.
+    
+    optional arguments:
+      -h, --help         show this help message and exit
+    
+    Mandatory Arguments:
+      -m MAC, --mac MAC  The MAC address to lookup.
+      -k KEY, --key KEY  macaddress.io API key.
+    bash-4.4# ./maclookup.py -k REDACTED -m 74:d4:35:64:8a:4e
     Giga-Byte Tech Co, Ltd
 
 # Security
